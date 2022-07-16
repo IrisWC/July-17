@@ -8,6 +8,7 @@ import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 import java.io.File;
@@ -29,6 +30,16 @@ public class CalculatorPanel extends JPanel{
 	
 	public CalculatorPanel() {
 		//background image
+		
+		BufferedImage img;
+		try {
+			img = ImageIO.read(new File("img//calculator.png"));
+			JLabel picLabel = new JLabel(new ImageIcon(img));
+			add(picLabel);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		
 		//drop down
@@ -55,15 +66,7 @@ public class CalculatorPanel extends JPanel{
 //	    add(jComboBox);
 //	    //add(jLabel);
 //	    
-//	    BufferedImage background;
-//		try {
-//			background = ImageIO.read(new File("img//calculator.png"));
-//			JLabel picLabel = new JLabel(new ImageIcon(background));
-//			add(picLabel);
-//		} catch (IOException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
+//	    
 //	    
 //	    jButton.addActionListener(new ActionListener() {
 //	        @Override
