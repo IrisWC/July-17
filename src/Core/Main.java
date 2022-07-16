@@ -12,7 +12,6 @@ public class Main {
 	    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
 	    CalculatorPanel calculator = new CalculatorPanel();
-	    calculator.setBackground(Color.WHITE);
 	    Container c = window.getContentPane();
 	    c.add(calculator);
 
