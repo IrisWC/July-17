@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.imageio.ImageIO;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -14,6 +15,10 @@ public class CalculatorPanel extends JPanel{
 	private BufferedImage image;
 	
 	public CalculatorPanel() {
+		//background image
+		ImageIcon background = new ImageIcon("calculator.png");
+		Image backgroundNew = background.getImage();
+		background = new ImageIcon(backgroundNew);
 		setBackground(Color.BLACK);
 		
 		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
