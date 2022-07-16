@@ -20,11 +20,12 @@ public class CalculatorPanel extends JPanel{
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
-	private String[] tattooOptions = {};
-	private String[] emojiOptions = {};
-	private String[] iceCreamOptions = {};
-	private String[] lotteryOptions = {};
-	private String[] holidayOptions = {};
+	private String[] tattooOptions = {"0", "1-2", "3-4", "4-5", "6+"};
+	private String[] emojiOptions = {"0", "1-5", "6-10", "11-15", "16+"};
+	private String[] iceCreamOptions = {"0", "1", "2", "3", "4+"};
+	private String[] planeOptions = {"0", "1", "2-3", "4-6", "7+"};
+	private String[] lotteryOptions = {"0", "1", "2-5", "6-15", "16+"};
+	private String[] holidayOptions = {"0", "1-3", "4-9", "10", "11+"};
 	
 	public CalculatorPanel() {
 		//background image
