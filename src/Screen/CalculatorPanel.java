@@ -1,6 +1,7 @@
 package Screen;
 
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -8,18 +9,27 @@ import javax.imageio.ImageIO;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
 import java.io.File;
+import java.io.IOException;
 
 public class CalculatorPanel extends JPanel{
 	
 	private BufferedImage image;
+	private Image background;
+	
 	
 	public CalculatorPanel() {
 		//background image
-		ImageIcon background = new ImageIcon("calculator.png");
-		Image backgroundNew = background.getImage();
-		background = new ImageIcon(backgroundNew);
-		setBackground(Color.BLACK);
+		BufferedImage myPicture;
+		try {
+			myPicture = ImageIO.read(new File("calculator.png"));
+			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+			add(picLabel);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
