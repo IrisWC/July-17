@@ -9,8 +9,8 @@ public class July17 extends JFrame implements ActionListener {
 	
 	CardLayout cl;
 	Container container;
-	JPanel panel1, panel2;
-	JButton button1, button2;
+	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
+	JButton goMenu, goCalculator, goFortune, goInfo;
 	
 	public July17() {
 		super("July 17");
@@ -18,31 +18,46 @@ public class July17 extends JFrame implements ActionListener {
 		container = getContentPane();
 		container.setLayout(cl);
 		
-		panel1 = new JPanel();
-		panel2 = new JPanel();
+		menuPanel = new JPanel();
+		calculatorPanel = new JPanel();
+		fortunePanel = new JPanel();
+		infoPanel = new JPanel();
 		
-		button1 = new JButton("Go to panel 2");
-		button2 = new JButton("Go to panel 1");
+		goMenu = new JButton("Menu");
+		goCalculator = new JButton("Net Worth Calculator");
+		goFortune = new JButton("Fortune Teller");
+		goInfo = new JButton("goInfo");
 		
-		button1.addActionListener(this);
-		button2.addActionListener(this);
 		
-		panel1.add(button1);
-		panel2.add(button2);
+		goMenu.addActionListener(this);
+		goCalculator.addActionListener(this);
+		goFortune.addActionListener(this);
+		goInfo.addActionListener(this);
 		
-		container.add(panel1, "panel1");
-		container.add(panel2, "panel2");
+//		panel1.add(button1);
+//		panel2.add(button2);
+		
+		container.add(menuPanel, "menuPanel");
+		container.add(calculatorPanel, "calculatorPanel");
+		container.add(fortunePanel, "fortunePanel");
+		container.add(infoPanel, "infoPanel");
 		
 
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == button1) {
-			cl.show(container, "panel2");
+		if(e.getSource() == goMenu) {
+			cl.show(container, "menuPanel");
 		}
-		if(e.getSource() == button2) {
-			cl.show(container, "panel1");
+		if(e.getSource() == goCalculator) {
+			cl.show(container, "calculatorPanel");
+		}
+		if(e.getSource() == goFortune) {
+			cl.show(container, "fortunePanel");
+		}
+		if(e.getSource() == goInfo) {
+			cl.show(container, "infoPanel");
 		}
 	}
 	
