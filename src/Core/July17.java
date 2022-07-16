@@ -10,7 +10,7 @@ public class July17 extends JFrame implements ActionListener {
 	CardLayout cl;
 	Container container;
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
-	JButton goMenu, goCalculator, goFortune, goInfo;
+	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo;
 	
 	public July17() {
 		super("July 17");
@@ -23,19 +23,27 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel = new JPanel();
 		infoPanel = new JPanel();
 		
-		goMenu = new JButton("Menu");
+		goMenu1 = new JButton("Menu");
+		goMenu2 = new JButton("Menu");
+		goMenu3 = new JButton("Menu");
 		goCalculator = new JButton("Net Worth Calculator");
 		goFortune = new JButton("Fortune Teller");
-		goInfo = new JButton("goInfo");
+		goInfo = new JButton("Info");
 		
 		
-		goMenu.addActionListener(this);
+		goMenu1.addActionListener(this);
+		goMenu2.addActionListener(this);
+		goMenu3.addActionListener(this);
 		goCalculator.addActionListener(this);
 		goFortune.addActionListener(this);
 		goInfo.addActionListener(this);
 		
-//		panel1.add(button1);
-//		panel2.add(button2);
+		menuPanel.add(goCalculator);
+		menuPanel.add(goFortune);
+		menuPanel.add(goInfo);
+		calculatorPanel.add(goMenu1);
+		fortunePanel.add(goMenu2);
+		infoPanel.add(goMenu3);
 		
 		container.add(menuPanel, "menuPanel");
 		container.add(calculatorPanel, "calculatorPanel");
@@ -47,7 +55,7 @@ public class July17 extends JFrame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == goMenu) {
+		if(e.getSource() == goMenu1 || e.getSource() == goMenu2 || e.getSource() == goMenu3) {
 			cl.show(container, "menuPanel");
 		}
 		if(e.getSource() == goCalculator) {
