@@ -23,9 +23,9 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel = new JPanel();
 		infoPanel = new JPanel();
 		
-		goMenu1 = new JButton("Menu");
-		goMenu2 = new JButton("Menu");
-		goMenu3 = new JButton("Menu");
+		goMenu1 = new JButton("Back");
+		goMenu2 = new JButton("Back");
+		goMenu3 = new JButton("Back");
 		goCalculator = new JButton("Net Worth Calculator");
 		goFortune = new JButton("Fortune Teller");
 		goInfo = new JButton("Info");
