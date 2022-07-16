@@ -16,7 +16,7 @@ class Switch_Frame implements ActionListener
 	{
 		//Create frame 1
 		frame1 = new JFrame("Frame 1");
-		frame1.setSize(250,250);
+		frame1.setSize(1600, 900);
 		frame1.setLayout(null);
 		frame1.setBackground(Color.white);
 		//Create next and close buttons
@@ -57,7 +57,7 @@ class Switch_Frame implements ActionListener
 	{
 		//Create frame 2
 		frame2 = new JFrame("Frame 2");
-		frame2.setSize(250,250);
+		frame2.setSize(1600, 900);
 		frame2.setLayout(null);
 		frame2.setBackground(Color.white);
 		//Create back button
