@@ -8,7 +8,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class FortunePanel extends JPanel{
-
+	
+	
 	public FortunePanel() {
 		BufferedImage background;
 		try {
@@ -20,5 +21,6 @@ public class FortunePanel extends JPanel{
 			e1.printStackTrace();
 		}
 	}
+	
 	
 }
