@@ -20,4 +20,8 @@ public class July17 extends JFrame implements ActionListener {
 		calculator = new CalculatorPanel();
 		fortune = new FortunePanel();
 	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
+	}
 }
