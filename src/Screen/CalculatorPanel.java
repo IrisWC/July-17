@@ -18,15 +18,7 @@ public class CalculatorPanel extends JPanel{
 	
 	public CalculatorPanel() {
 		//background image
-		BufferedImage background;
-		try {
-			background = ImageIO.read(new File("calculator.png"));
-			JLabel picLabel = new JLabel(new ImageIcon(background));
-			add(picLabel);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		
 		
 		//drop down
 		//Int[] 
@@ -51,6 +43,16 @@ public class CalculatorPanel extends JPanel{
 	    add(jButton);
 	    add(jComboBox);
 	    //add(jLabel);
+	    
+	    BufferedImage background;
+		try {
+			background = ImageIO.read(new File("calculator.png"));
+			JLabel picLabel = new JLabel(new ImageIcon(background));
+			add(picLabel);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	    
 	    jButton.addActionListener(new ActionListener() {
 	        @Override
