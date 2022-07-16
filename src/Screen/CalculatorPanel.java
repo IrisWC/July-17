@@ -50,10 +50,11 @@ public class CalculatorPanel extends JPanel{
 		
 		
 		//drop down boxes
-		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
+		//String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
-		JComboBox<String> jComboBox = new JComboBox<>(optionsToChoose);
+		JComboBox<String> jComboBox = new JComboBox<>(mathOptions);
 	    jComboBox.setBounds(80, 50, 140, 20);
+	    jComboBox.setBackground(new Color(40, 75, 80));
 	    
 	    
 	    label.add(jComboBox);
