@@ -26,6 +26,7 @@ public class CalculatorPanel extends JPanel{
         JButton jButton = new JButton(icon);
         jButton.setBounds(100, 100, 90, 20);
         jButton.setBackground(Color.BLACK);
+        jButton.setBorderPainted(false);
 
 //        JLabel jLabel = new JLabel();
 //        jLabel.setBounds(90, 100, 400, 100);
