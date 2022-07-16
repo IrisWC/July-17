@@ -30,7 +30,7 @@ public class CalculatorPanel extends JPanel{
 		JComboBox<String> jComboBox = new JComboBox<>(optionsToChoose);
 	    jComboBox.setBounds(80, 50, 140, 20);
 	    
-	    ImageIcon icon = new ImageIcon("Test.png");
+	    ImageIcon icon = new ImageIcon("img//Test.png");
 	    
 	    JButton jButton = new JButton(icon);
 	    jButton.setBounds(100, 100, 90, 20);
@@ -46,7 +46,7 @@ public class CalculatorPanel extends JPanel{
 	    
 	    BufferedImage background;
 		try {
-			background = ImageIO.read(new File("calculator.png"));
+			background = ImageIO.read(new File("img//calculator.png"));
 			JLabel picLabel = new JLabel(new ImageIcon(background));
 			add(picLabel);
 		} catch (IOException e1) {
