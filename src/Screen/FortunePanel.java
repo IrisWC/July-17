@@ -12,7 +12,7 @@ public class FortunePanel extends JPanel{
 	public FortunePanel() {
 		BufferedImage background;
 		try {
-			background = ImageIO.read(new File("fortune.png"));
+			background = ImageIO.read(new File("img//fortune.png"));
 			JLabel picLabel = new JLabel(new ImageIcon(background));
 			add(picLabel);
 		} catch (IOException e1) {
