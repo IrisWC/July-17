@@ -13,7 +13,7 @@ public class Main {
 	    
 	    July17 panel = new July17();
 	    CalculatorScreen calculator = new CalculatorScreen();
-	    //calculator.setBackground(Color.WHITE);
+	    calculator.setBackground(Color.WHITE);
 	    Container c = window.getContentPane();
 	    c.add(panel);
 	    c.add(calculator);
