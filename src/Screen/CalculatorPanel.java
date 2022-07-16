@@ -31,26 +31,32 @@ public class CalculatorPanel extends JPanel{
 	public CalculatorPanel() {
 		//background image
 		
-		BufferedImage img;
-		try {
-			img = ImageIO.read(new File("img//calculator.png"));
-			JLabel picLabel = new JLabel(new ImageIcon(img));
-			add(picLabel);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		BufferedImage img;
+//		try {
+//			img = ImageIO.read(new File("img//calculator.png"));
+//			JLabel picLabel = new JLabel(new ImageIcon(img));
+//			add(picLabel);
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		
+		ImageIcon background = new ImageIcon("img//calculator.png");
+		JLabel label = new JLabel(background);
+		label.setSize(1600, 900);
 		
 		//drop down
 		//Int[] 
 		
 		
 		//drop down boxes
-//		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
-//		
-//		JComboBox<String> jComboBox = new JComboBox<>(optionsToChoose);
-//	    jComboBox.setBounds(80, 50, 140, 20);
+		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
+		
+		JComboBox<String> jComboBox = new JComboBox<>(optionsToChoose);
+	    jComboBox.setBounds(80, 50, 140, 20);
+	    
+	    
+	    label.add(jComboBox);
 //	    
 //	    ImageIcon icon = new ImageIcon("img//Test.png");
 //	    
@@ -64,7 +70,8 @@ public class CalculatorPanel extends JPanel{
 //	    
 //	    add(jButton);
 //	    add(jComboBox);
-//	    //add(jLabel);
+	    add(label);
+	    //add(jLabel);
 //	    
 //	    
 //	    
