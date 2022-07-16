@@ -14,7 +14,7 @@ public class CalculatorPanel extends JPanel{
 	private BufferedImage image;
 	
 	public CalculatorPanel() {
-		setBackground(Color.WHITE);
+		setBackground(Color.BLACK);
 		
 		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
@@ -25,6 +25,7 @@ public class CalculatorPanel extends JPanel{
         
         JButton jButton = new JButton(icon);
         jButton.setBounds(100, 100, 90, 20);
+        jButton.setBackground(Color.BLACK);
 
 //        JLabel jLabel = new JLabel();
 //        jLabel.setBounds(90, 100, 400, 100);
