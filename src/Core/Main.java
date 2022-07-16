@@ -3,6 +3,7 @@ package Core;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import Screen.*;
 
 public class Main {
 	public static void main(String args[]) {
@@ -11,9 +12,11 @@ public class Main {
 	    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
 	    July17 panel = new July17();
-	    panel.setBackground(Color.WHITE);
+	    CalculatorScreen calculator = new CalculatorScreen();
+	    //calculator.setBackground(Color.WHITE);
 	    Container c = window.getContentPane();
 	    c.add(panel);
+	    c.add(calculator);
 
 	    window.setVisible(true);
 	}

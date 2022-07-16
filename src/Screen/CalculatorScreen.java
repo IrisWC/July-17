@@ -1,5 +1,7 @@
 package Screen;
 
-public class CalculatorScreen {
+import javax.swing.*;
+
+public class CalculatorScreen extends JPanel{
 
 }
