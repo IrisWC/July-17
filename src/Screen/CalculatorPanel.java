@@ -31,8 +31,6 @@ public class CalculatorPanel extends JPanel{
 //        JLabel jLabel = new JLabel();
 //        jLabel.setBounds(90, 100, 400, 100);
         
-       //image = ImageIO.read(new File("image name and path"));
-        
         add(jButton);
         add(jComboBox);
         //add(jLabel);
