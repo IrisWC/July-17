@@ -19,7 +19,7 @@ public class CalculatorPanel extends JPanel{
 	private int mathClasses, peachIceCream, tattoos, emojis, iceCream, planeRides, lotteryTickets, nationalHolidays;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
-	private String[] peachOptions = {"0"};
+	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
 	private String[] tattooOptions = {};
 	private String[] emojiOptions = {};
 	private String[] iceCreamOptions = {};
