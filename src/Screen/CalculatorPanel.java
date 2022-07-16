@@ -16,20 +16,29 @@ import java.io.IOException;
 public class CalculatorPanel extends JPanel{
 	
 	private BufferedImage image;
-	private Image background;
 	
 	
 	public CalculatorPanel() {
 		//background image
-		BufferedImage myPicture;
-		try {
-			myPicture = ImageIO.read(new File("calculator.png"));
-			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+//		BufferedImage myPicture;
+//		try {
+//			myPicture = ImageIO.read(new File("calculator.png"));
+//			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+//			add(picLabel);
+//		} catch (IOException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		
+		Image background;
+	    try {
+	        background = ImageIO.read(new File("calculator.png")).getScaledInstance(1600, 900, Image.SCALE_SMOOTH);
+	        JLabel picLabel = new JLabel(new ImageIcon(background));
 			add(picLabel);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+		
 		
 		String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
