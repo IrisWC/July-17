@@ -8,12 +8,28 @@ import java.awt.event.ActionListener;
 
 public class MenuPanel extends JPanel{
 	
-	JButton calculatorButton;
-	
 	public MenuPanel(ActionListener a) {
-		setBackground(Color.BLACK);
-		calculatorButton = new JButton("Net Worth Calculator");
-		calculatorButton.addActionListener(a);
+		ImageIcon menuBackground = new ImageIcon("img//menu.png"); //TODO link to correct background file
+		JLabel menuLabel = new JLabel(menuBackground);
+		menuLabel.setSize(1600, 900);
+		
+		ImageIcon nwcIcon = new ImageIcon("img//calculateNW.png"); //TODO link to correct button image
+	    JButton goCalculator = new JButton(nwcIcon);
+	    goCalculator.setBounds(675, 737, 250, 90);
+	    goCalculator.setBackground(Color.BLACK);
+	    goCalculator.setBorderPainted(true);
+	    
+	    ImageIcon fortuneIcon = new ImageIcon("img//calculateNW.png"); //TODO link to correct button image
+	    JButton goFortune = new JButton(fortuneIcon);
+	    goFortune.setBounds(675, 737, 250, 90);
+	    goFortune.setBackground(Color.BLACK);
+	    goFortune.setBorderPainted(true);
+	    
+	    ImageIcon infoIcon = new ImageIcon("img//calculateNW.png"); //TODO link to correct button image
+	    JButton goInfo = new JButton(infoIcon);
+	    goInfo.setBounds(675, 737, 250, 90);
+	    goInfo.setBackground(Color.BLACK);
+	    goInfo.setBorderPainted(true);
 	}
 
 }
