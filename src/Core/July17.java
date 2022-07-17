@@ -12,6 +12,15 @@ public class July17 extends JFrame implements ActionListener {
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
 	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo;
 	
+	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
+	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
+	private String[] tattooOptions = {"0", "1-2", "3-4", "4-5", "6+"};
+	private String[] emojiOptions = {"0", "1-5", "6-15", "16-30", "31+"};
+	private String[] iceCreamOptions = {"0", "1", "2-3", "4-6", "7+"};
+	private String[] planeOptions = {"0", "1", "2-3", "4-6", "7+"};
+	private String[] lotteryOptions = {"0", "1", "2-5", "6-15", "16+"};
+	private String[] holidayOptions = {"0", "1-3", "4-9", "10", "11+"};
+	
 	public July17() {
 		super("July 17");
 		cl = new CardLayout();
@@ -45,6 +54,74 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel.add(goMenu2);
 		infoPanel.add(goMenu3);
 		
+		//Calculator Panel start --------------------------------------------------
+		
+		ImageIcon calcBackground = new ImageIcon("img//calculator.png");
+		JLabel calcLabel = new JLabel(calcBackground);
+		calcLabel.setSize(1600, 900);
+		
+		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
+	    mathBox.setBounds(543, 244, 140, 50);
+	    mathBox.setBackground(Color.WHITE);
+	    mathBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
+	    peachBox.setBounds(543, 376, 140, 50);
+	    peachBox.setBackground(Color.WHITE);
+	    peachBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
+	    tattooBox.setBounds(543, 491, 140, 50);
+	    tattooBox.setBackground(Color.WHITE);
+	    tattooBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
+	    emojiBox.setBounds(543, 623, 140, 50);
+	    emojiBox.setBackground(Color.WHITE);
+	    emojiBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
+	    iceCreamBox.setBounds(1263, 244, 140, 50);
+	    iceCreamBox.setBackground(Color.WHITE);
+	    iceCreamBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> planeBox = new JComboBox<>(planeOptions);
+	    planeBox.setBounds(1263, 376, 140, 50);
+	    planeBox.setBackground(Color.WHITE);
+	    planeBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> lotteryBox = new JComboBox<>(lotteryOptions);
+	    lotteryBox.setBounds(1263, 508, 140, 50);
+	    lotteryBox.setBackground(Color.WHITE);
+	    lotteryBox.setForeground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
+	    holidayBox.setBounds(1263, 623, 140, 50);
+	    holidayBox.setBackground(Color.WHITE);
+	    holidayBox.setForeground(new Color(40, 75, 80));
+	    
+	    calcLabel.add(mathBox);
+	    calcLabel.add(peachBox);
+	    calcLabel.add(tattooBox);
+	    calcLabel.add(emojiBox);
+	    calcLabel.add(iceCreamBox);
+	    calcLabel.add(planeBox);
+	    calcLabel.add(lotteryBox);
+	    calcLabel.add(holidayBox);
+	    
+	    ImageIcon calcIcon = new ImageIcon("img//calculateNW.png");
+	    
+	    JButton calcButton = new JButton(calcIcon);
+	    calcButton.setBounds(675, 737, 250, 90);
+	    calcButton.setBackground(new Color(40, 75, 80));
+	    calcButton.setBorderPainted(false);
+	    
+	    calcLabel.add(calcButton);
+	    
+	    calculatorPanel.add(calcLabel);
+		
+	  //Calculator Panel end ---------------------------------------------------------
+	    
 		container.add(menuPanel, "menuPanel");
 		container.add(calculatorPanel, "calculatorPanel");
 		container.add(fortunePanel, "fortunePanel");
