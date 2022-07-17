@@ -332,7 +332,8 @@ public class July17 extends JFrame implements ActionListener {
 			int tier = calcNetWorth();
 			
 			JFrame result = new JFrame();
-			result.setSize(400, 400);
+			result.setSize(500, 500);
+			result.setBackground(Color.BLACK);
 			result.setLocation(0, 0);
 			result.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			result.setLocationRelativeTo(null);
