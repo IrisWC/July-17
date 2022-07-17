@@ -47,9 +47,9 @@ public class July17 extends JFrame implements ActionListener {
 		
 		//Menu Panel start --------------------------------------------------------
 	    
-		ImageIcon menuBackground = new ImageIcon("img//menu.gif"); 
+		ImageIcon menuBackground = new ImageIcon("img//menu.png"); 
 		JLabel menuLabel = new JLabel(menuBackground);
-		menuLabel.setSize(1600, 900);
+		menuLabel.setSize(1000, 900);
 		
 		ImageIcon nwcIcon = new ImageIcon("img//nwc.png"); 
 		Image nwcIconNew = nwcIcon.getImage();
@@ -62,6 +62,9 @@ public class July17 extends JFrame implements ActionListener {
 		goCalculator.addActionListener(this);
 	    
 	    ImageIcon fortuneIcon = new ImageIcon("img//ft.png"); 
+	    Image fortuneIconNew = fortuneIcon.getImage();
+		Image fortuneIconModified = fortuneIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		fortuneIcon = new ImageIcon(fortuneIconModified);
 	    goFortune = new JButton(fortuneIcon);
 	    goFortune.setBounds(1174, 90, 324, 324);
 	    goFortune.setBackground(Color.BLACK);
@@ -69,6 +72,9 @@ public class July17 extends JFrame implements ActionListener {
 		goFortune.addActionListener(this);
 	    
 	    ImageIcon infoIcon = new ImageIcon("img//i.png"); 
+	    Image infoIconNew = infoIcon.getImage();
+		Image infoIconnModified = infoIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		infoIcon = new ImageIcon(infoIconnModified);
 	    goInfo = new JButton(infoIcon);
 	    goInfo.setBounds(787, 486, 324, 324);
 	    goInfo.setBackground(Color.BLACK);
