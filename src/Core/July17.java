@@ -13,7 +13,7 @@ public class July17 extends JFrame implements ActionListener {
 	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton;
 	ImageIcon backButton = new ImageIcon("img//backButton.png");
 	Image backButtonNew = backButton.getImage();
-	Image backButtonModified = backButtonNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
+	Image backButtonModified = backButtonNew.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 	backButton = new ImageIcon(backButtonModified);
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
