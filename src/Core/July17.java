@@ -154,7 +154,7 @@ public class July17 extends JFrame implements ActionListener {
 	    calcButton.setBounds(675, 737, 250, 90);
 	    calcButton.setBackground(new Color(40, 75, 80));
 	    calcButton.setBorderPainted(false);
-	    
+	    calcButton.addActionListener(this);
 	    
 	    calcLabel.add(calcButton);
 	    
@@ -224,7 +224,11 @@ public class July17 extends JFrame implements ActionListener {
 			cl.show(container, "infoPanel");
 		}
 		if(e.getSource() == calcButton) {
-
+			JFrame result = new JFrame();
+			result.setSize(400, 400);
+			result.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			result.setLocationRelativeTo(null);
+			result.setVisible(true);
 		}
 		if(e.getSource() == fortuneButton) {
 
