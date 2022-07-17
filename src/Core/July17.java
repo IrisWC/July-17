@@ -15,6 +15,7 @@ public class July17 extends JFrame implements ActionListener {
 	JButton goMenu1, goMenu2, goMenu3, goMenu4, goCalculator, goFortune, goInfo, goBird, calcButton, fortuneButton;
 	ImageIcon backButton;
 	JLabel fortuneLabel, fortune1Label, fortune2Label, fortune3Label, fortune4Label, fortune5Label, fortune6Label, fortune7Label, fortune8Label;
+	JComboBox<String> mathBox, peachBox, tattooBox, emojiBox, iceCreamBox, planeBox, lotteryBox, holidayBox;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -110,42 +111,42 @@ public class July17 extends JFrame implements ActionListener {
 		JLabel calcLabel = new JLabel(calcBackground);
 		calcLabel.setSize(1600, 900);
 		
-		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
+		mathBox = new JComboBox<>(mathOptions);
 	    mathBox.setBounds(543, 244, 140, 50);
 	    mathBox.setBackground(Color.WHITE);
 	    mathBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
+	    peachBox = new JComboBox<>(peachOptions);
 	    peachBox.setBounds(543, 376, 140, 50);
 	    peachBox.setBackground(Color.WHITE);
 	    peachBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
+	    tattooBox = new JComboBox<>(tattooOptions);
 	    tattooBox.setBounds(543, 508, 140, 50);
 	    tattooBox.setBackground(Color.WHITE);
 	    tattooBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
+	    emojiBox = new JComboBox<>(emojiOptions);
 	    emojiBox.setBounds(543, 625, 140, 50);
 	    emojiBox.setBackground(Color.WHITE);
 	    emojiBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
+	    iceCreamBox = new JComboBox<>(iceCreamOptions);
 	    iceCreamBox.setBounds(1263, 244, 140, 50);
 	    iceCreamBox.setBackground(Color.WHITE);
 	    iceCreamBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> planeBox = new JComboBox<>(planeOptions);
+	    planeBox = new JComboBox<>(planeOptions);
 	    planeBox.setBounds(1263, 376, 140, 50);
 	    planeBox.setBackground(Color.WHITE);
 	    planeBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> lotteryBox = new JComboBox<>(lotteryOptions);
+	    lotteryBox = new JComboBox<>(lotteryOptions);
 	    lotteryBox.setBounds(1263, 508, 140, 50);
 	    lotteryBox.setBackground(Color.WHITE);
 	    lotteryBox.setForeground(new Color(40, 75, 80));
 	    
-	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
+	    holidayBox = new JComboBox<>(holidayOptions);
 	    holidayBox.setBounds(1263, 625, 140, 50);
 	    holidayBox.setBackground(Color.WHITE);
 	    holidayBox.setForeground(new Color(40, 75, 80));
@@ -328,10 +329,19 @@ public class July17 extends JFrame implements ActionListener {
 			cl.show(container, "birdPanel");
 		}
 		if(e.getSource() == calcButton) {
+			int tier = calcNetWorth();
+			
 			JFrame result = new JFrame();
 			result.setSize(400, 400);
+			result.setLocation(0, 0);
 			result.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			result.setLocationRelativeTo(null);
+			result.setResizable(false);
+			
+			ImageIcon category = new ImageIcon("img//" + tier + ".png");
+			JLabel picLabel = new JLabel(category);
+			result.add(picLabel);
+			
 			result.setVisible(true);
 		}
 		if(e.getSource() == fortuneButton) {
@@ -365,6 +375,44 @@ public class July17 extends JFrame implements ActionListener {
 			fortunePanel.revalidate();
 			fortunePanel.repaint();
 		}
+	}
+	
+	public int calcNetWorth() {
+		int sum = 0;
+		sum += mathBox.getSelectedIndex();
+		sum += peachBox.getSelectedIndex();
+		sum += tattooBox.getSelectedIndex();
+		sum += emojiBox.getSelectedIndex();
+		sum += iceCreamBox.getSelectedIndex();
+		sum += planeBox.getSelectedIndex();
+		sum += lotteryBox.getSelectedIndex();
+		sum += holidayBox.getSelectedIndex();
+		
+		int category = 0;
+		
+		if(sum >= 32) {
+			category = 6;
+		}
+		else if(sum >= 30) {
+			category = 5;
+		}
+		else if(sum >= 25) {
+			category = 4;
+		}
+		else if(sum >= 12) {
+			category = 3;
+		}
+		else if(sum >= 6) {
+			category = 2;
+		}
+		else if(sum >= 2) {
+			category = 1;
+		}
+		else {
+			category = 0;
+		}
+		
+		return category;
 	}
 	
 //	CardLayout cl;
