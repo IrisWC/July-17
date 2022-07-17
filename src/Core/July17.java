@@ -335,7 +335,7 @@ public class July17 extends JFrame implements ActionListener {
 			result.setSize(500, 500);
 			result.setBackground(Color.BLACK);
 			result.setLocation(0, 0);
-			result.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//			result.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			result.setLocationRelativeTo(null);
 			result.setResizable(false);
 			
