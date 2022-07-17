@@ -12,7 +12,7 @@ public class Main {
 		window.setSize(1600, 900);
 	    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
-	    CalculatorPanel calculator = new CalculatorPanel();
+	    FortunePanel calculator = new FortunePanel();
 	    Container c = window.getContentPane();
 	    c.add(calculator);
 
