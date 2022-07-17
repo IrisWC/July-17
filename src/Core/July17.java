@@ -52,8 +52,11 @@ public class July17 extends JFrame implements ActionListener {
 		menuLabel.setSize(1600, 900);
 		
 		ImageIcon nwcIcon = new ImageIcon("img//nwc.png"); 
+		Image nwcIconNew = nwcIcon.getImage();
+		Image nwcIconModified = nwcIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		nwcIcon = new ImageIcon(nwcIconModified);
 	    goCalculator = new JButton(nwcIcon);
-	    goCalculator.setBounds(787, 90, 324, 324);
+	    goCalculator.setBounds(787, 90, 282, 282);
 	    goCalculator.setBackground(Color.BLACK);
 	    goCalculator.setBorderPainted(false);
 		goCalculator.addActionListener(this);
