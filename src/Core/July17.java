@@ -10,7 +10,7 @@ public class July17 extends JFrame implements ActionListener {
 	CardLayout cl;
 	Container container;
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
-	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo;
+	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -113,7 +113,7 @@ public class July17 extends JFrame implements ActionListener {
 	    
 	    ImageIcon calcIcon = new ImageIcon("img//calculateNW.png");
 	    
-	    JButton calcButton = new JButton(calcIcon);
+	    calcButton = new JButton(calcIcon);
 	    calcButton.setBounds(675, 737, 250, 90);
 	    calcButton.setBackground(new Color(40, 75, 80));
 	    calcButton.setBorderPainted(false);
@@ -147,6 +147,9 @@ public class July17 extends JFrame implements ActionListener {
 		}
 		if(e.getSource() == goInfo) {
 			cl.show(container, "infoPanel");
+		}
+		if(e.getSource() == calcButton) {
+			
 		}
 	}
 	
