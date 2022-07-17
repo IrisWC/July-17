@@ -54,8 +54,8 @@ public class CalculatorPanel extends JPanel{
 		
 		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
 	    mathBox.setBounds(543, 244, 176, 60);
-	    mathBox.setBackground(Color.WHITE);
-	    mathBox.setForeground(new Color(40, 75, 80));
+	    mathBox.setBackground(new Color(40, 75, 80));
+	    mathBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
 	    peachBox.setBounds(543, 376, 176, 60);
