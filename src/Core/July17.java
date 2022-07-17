@@ -48,43 +48,41 @@ public class July17 extends JFrame implements ActionListener {
 		ImageIcon menuBackground = new ImageIcon("img//menu.gif"); 
 		JLabel menuLabel = new JLabel(menuBackground);
 		menuLabel.setSize(1600, 900);
+		menuLabel.setLocation(10, 100);
+		menuPanel.setBackground(Color.BLACK);
 		
 		ImageIcon nwcIcon = new ImageIcon("img//nwc.png"); 
 		Image nwcIconNew = nwcIcon.getImage();
-		Image nwcIconModified = nwcIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		Image nwcIconModified = nwcIconNew.getScaledInstance(296, 296, Image.SCALE_SMOOTH);
 		nwcIcon = new ImageIcon(nwcIconModified);
 	    goCalculator = new JButton(nwcIcon);
-	    goCalculator.setBounds(787, 90, 282, 282);
+	    goCalculator.setBounds(705, 90, 296, 296);
 	    goCalculator.setBackground(Color.BLACK);
 	    goCalculator.setBorderPainted(false);
 		goCalculator.addActionListener(this);
 	    
 	    ImageIcon fortuneIcon = new ImageIcon("img//ft.png"); 
 	    Image fortuneIconNew = fortuneIcon.getImage();
-		Image fortuneIconModified = fortuneIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		Image fortuneIconModified = fortuneIconNew.getScaledInstance(296, 296, Image.SCALE_SMOOTH);
 		fortuneIcon = new ImageIcon(fortuneIconModified);
 	    goFortune = new JButton(fortuneIcon);
-	    goFortune.setBounds(1174, 90, 282, 282);
+	    goFortune.setBounds(1054, 90, 296, 296);
 	    goFortune.setBackground(Color.BLACK);
 	    goFortune.setBorderPainted(false);
 		goFortune.addActionListener(this);
 	    
 	    ImageIcon infoIcon = new ImageIcon("img//i.png"); 
 	    Image infoIconNew = infoIcon.getImage();
-		Image infoIconnModified = infoIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		Image infoIconnModified = infoIconNew.getScaledInstance(296, 296, Image.SCALE_SMOOTH);
 		infoIcon = new ImageIcon(infoIconnModified);
 	    goInfo = new JButton(infoIcon);
-	    goInfo.setBounds(787, 486, 282, 282);
+	    goInfo.setBounds(705, 434, 296, 296);
 	    goInfo.setBackground(Color.BLACK);
 	    goInfo.setBorderPainted(false);
 	    goInfo.addActionListener(this);
 	    
-	    ImageIcon birdIcon = new ImageIcon("img//b.gif"); 
-	    Image birdIconNew = birdIcon.getImage();
-		Image birdIconModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
-		infoIcon = new ImageIcon(birdIconModified);
 	    goBird = new JButton();
-	    goBird.setBounds(1174, 486, 282, 282);
+	    goBird.setBounds(1054, 434, 296, 296);
 	    goBird.setBackground(Color.BLACK);
 	    goBird.setBorderPainted(false);
 	    goBird.setOpaque(false);
@@ -114,7 +112,7 @@ public class July17 extends JFrame implements ActionListener {
 		calcLabel.setSize(1600, 900);
 		
 		mathBox = new JComboBox<>(mathOptions);
-	    mathBox.setBounds(543, 244, 140, 50);
+	    mathBox.setBounds(543, 250, 140, 50);
 	    mathBox.setBackground(Color.WHITE);
 	    mathBox.setForeground(new Color(40, 75, 80));
 	    
@@ -124,17 +122,17 @@ public class July17 extends JFrame implements ActionListener {
 	    peachBox.setForeground(new Color(40, 75, 80));
 	    
 	    tattooBox = new JComboBox<>(tattooOptions);
-	    tattooBox.setBounds(543, 508, 140, 50);
+	    tattooBox.setBounds(543, 503, 140, 50);
 	    tattooBox.setBackground(Color.WHITE);
 	    tattooBox.setForeground(new Color(40, 75, 80));
 	    
 	    emojiBox = new JComboBox<>(emojiOptions);
-	    emojiBox.setBounds(543, 625, 140, 50);
+	    emojiBox.setBounds(543, 628, 140, 50);
 	    emojiBox.setBackground(Color.WHITE);
 	    emojiBox.setForeground(new Color(40, 75, 80));
 	    
 	    iceCreamBox = new JComboBox<>(iceCreamOptions);
-	    iceCreamBox.setBounds(1263, 244, 140, 50);
+	    iceCreamBox.setBounds(1263, 250, 140, 50);
 	    iceCreamBox.setBackground(Color.WHITE);
 	    iceCreamBox.setForeground(new Color(40, 75, 80));
 	    
@@ -144,12 +142,12 @@ public class July17 extends JFrame implements ActionListener {
 	    planeBox.setForeground(new Color(40, 75, 80));
 	    
 	    lotteryBox = new JComboBox<>(lotteryOptions);
-	    lotteryBox.setBounds(1263, 508, 140, 50);
+	    lotteryBox.setBounds(1263, 503, 140, 50);
 	    lotteryBox.setBackground(Color.WHITE);
 	    lotteryBox.setForeground(new Color(40, 75, 80));
 	    
 	    holidayBox = new JComboBox<>(holidayOptions);
-	    holidayBox.setBounds(1263, 625, 140, 50);
+	    holidayBox.setBounds(1263, 628, 140, 50);
 	    holidayBox.setBackground(Color.WHITE);
 	    holidayBox.setForeground(new Color(40, 75, 80));
 	    
@@ -271,7 +269,7 @@ public class July17 extends JFrame implements ActionListener {
 		//Info Panel start ------------------------------------------------------------
 		
 		goMenu3 = new JButton(backButton);
-		goMenu3.setBounds(150, 80, 70, 70);
+		goMenu3.setBounds(80, 80, 70, 70);
 		goMenu3.setBackground(Color.BLACK);
 		goMenu3.setBorderPainted(false);
 		goMenu3.addActionListener(this);
@@ -280,7 +278,15 @@ public class July17 extends JFrame implements ActionListener {
 		JLabel infoLabel = new JLabel(infoBackground);
 		infoLabel.setSize(1600, 900);
 		
+		ImageIcon buttonPointerIcon = new ImageIcon("img//buttonPointer.png");
+	    Image buttonPointerIconnNew = buttonPointerIcon.getImage();
+		Image buttonPointerIconModified = buttonPointerIconnNew.getScaledInstance(213, 32, Image.SCALE_SMOOTH);
+		buttonPointerIcon = new ImageIcon(buttonPointerIconModified);
+		JLabel buttonPointerLabel = new JLabel(buttonPointerIcon);
+		buttonPointerLabel.setBounds(160, 97, 213, 32);
+		
 		infoLabel.add(goMenu3);
+		infoLabel.add(buttonPointerLabel);
 		
 		infoPanel.add(infoLabel);
 		
@@ -334,8 +340,7 @@ public class July17 extends JFrame implements ActionListener {
 			int tier = calcNetWorth();
 			
 			JFrame result = new JFrame();
-			result.setSize(500, 500);
-			result.setBackground(Color.BLACK);
+			result.setSize(443, 470);
 			result.setLocation(0, 0);
 			result.setLocationRelativeTo(null);
 			result.setResizable(false);
