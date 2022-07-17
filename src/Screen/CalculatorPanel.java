@@ -53,44 +53,44 @@ public class CalculatorPanel extends JPanel{
 		//String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
 		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
-	    mathBox.setBounds(543, 244, 176, 60);
+	    mathBox.setBounds(543, 244, 140, 50);
 	    mathBox.setBackground(Color.WHITE);
 	    mathBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
-	    peachBox.setBounds(543, 376, 176, 60);
-	    peachBox.setBackground(new Color(40, 75, 80));
-	    peachBox.setForeground(Color.WHITE);
+	    peachBox.setBounds(543, 376, 140, 50);
+	    peachBox.setBackground(Color.WHITE);
+	    peachBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
-	    tattooBox.setBounds(543, 491, 176, 60);
-	    tattooBox.setBackground(new Color(40, 75, 80));
-	    tattooBox.setForeground(Color.WHITE);
+	    tattooBox.setBounds(543, 491, 140, 50);
+	    tattooBox.setBackground(Color.WHITE);
+	    tattooBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
-	    emojiBox.setBounds(543, 623, 176, 60);
-	    emojiBox.setBackground(new Color(40, 75, 80));
-	    emojiBox.setForeground(Color.WHITE);
+	    emojiBox.setBounds(543, 623, 140, 50);
+	    emojiBox.setBackground(Color.WHITE);
+	    emojiBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
-	    iceCreamBox.setBounds(1263, 244, 176, 60);
-	    iceCreamBox.setBackground(new Color(40, 75, 80));
-	    iceCreamBox.setForeground(Color.WHITE);
+	    iceCreamBox.setBounds(1263, 244, 140, 50);
+	    iceCreamBox.setBackground(Color.WHITE);
+	    iceCreamBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> planeBox = new JComboBox<>(planeOptions);
-	    planeBox.setBounds(1263, 376, 176, 60);
-	    planeBox.setBackground(new Color(40, 75, 80));
-	    planeBox.setForeground(Color.WHITE);
+	    planeBox.setBounds(1263, 376, 140, 50);
+	    planeBox.setBackground(Color.WHITE);
+	    planeBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> lotteryBox = new JComboBox<>(lotteryOptions);
-	    lotteryBox.setBounds(1263, 508, 176, 60);
-	    lotteryBox.setBackground(new Color(40, 75, 80));
-	    lotteryBox.setForeground(Color.WHITE);
+	    lotteryBox.setBounds(1263, 508, 140, 50);
+	    lotteryBox.setBackground(Color.WHITE);
+	    lotteryBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
-	    holidayBox.setBounds(1263, 623, 176, 60);
-	    holidayBox.setBackground(new Color(40, 75, 80));
-	    holidayBox.setForeground(Color.WHITE);
+	    holidayBox.setBounds(1263, 623, 140, 50);
+	    holidayBox.setBackground(Color.WHITE);
+	    holidayBox.setForeground(new Color(40, 75, 80));
 	    
 	    label.add(mathBox);
 	    label.add(peachBox);
