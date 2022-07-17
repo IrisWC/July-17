@@ -45,7 +45,7 @@ public class July17 extends JFrame implements ActionListener {
 		
 		//Menu Panel start --------------------------------------------------------
 	    
-		ImageIcon menuBackground = new ImageIcon("img//menu.png"); 
+		ImageIcon menuBackground = new ImageIcon("img//menu.gif"); 
 		JLabel menuLabel = new JLabel(menuBackground);
 		menuLabel.setSize(1600, 900);
 		
