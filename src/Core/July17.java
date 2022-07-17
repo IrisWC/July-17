@@ -33,14 +33,12 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel = new JPanel();
 		infoPanel = new JPanel();
 		
-		goMenu2 = new JButton("Back");
 		goMenu3 = new JButton("Back");
 		goCalculator = new JButton("Net Worth Calculator");
 		goFortune = new JButton("Fortune Teller");
 		goInfo = new JButton("Info");
 		
 
-		goMenu2.addActionListener(this);
 		goMenu3.addActionListener(this);
 		goCalculator.addActionListener(this);
 		goFortune.addActionListener(this);
@@ -49,7 +47,6 @@ public class July17 extends JFrame implements ActionListener {
 		menuPanel.add(goCalculator);
 		menuPanel.add(goFortune);
 		menuPanel.add(goInfo);
-		fortunePanel.add(goMenu2);
 		infoPanel.add(goMenu3);
 		
 		backButton = new ImageIcon("img//backButton.png");
@@ -65,7 +62,6 @@ public class July17 extends JFrame implements ActionListener {
 		goMenu1.setBackground(Color.BLACK);
 		goMenu1.setBorderPainted(false);
 		goMenu1.addActionListener(this);
-		calculatorPanel.add(goMenu1);
 		
 		ImageIcon calcBackground = new ImageIcon("img//calculator.png");
 		JLabel calcLabel = new JLabel(calcBackground);
@@ -138,6 +134,45 @@ public class July17 extends JFrame implements ActionListener {
 	    calculatorPanel.add(calcLabel);
 		
 	  //Calculator Panel end ---------------------------------------------------------
+	    
+	  //Fortune Panel start ----------------------------------------------------------
+	    
+	    goMenu2 = new JButton(backButton);
+		goMenu2.setBounds(100, 100, 50, 50);
+		goMenu2.setBackground(Color.BLACK);
+		goMenu2.setBorderPainted(false);
+		goMenu2.addActionListener(this);
+	    
+	    ImageIcon fortuneBackground = new ImageIcon("img//fortune.png");
+		JLabel fortuneLabel = new JLabel(fortuneBackground);
+		fortuneLabel.setSize(1600, 900);
+		
+		ImageIcon fortuneIcon = new ImageIcon("img//getCard.png");
+		Image fortuneIconNew = fortuneIcon.getImage();
+		Image fortuneIconModified = fortuneIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
+		fortuneIcon = new ImageIcon(fortuneIconModified);
+	    
+	    JButton fortuneButton = new JButton(fortuneIcon);
+	    fortuneButton.setBounds(730, 650, 160, 74);
+	    fortuneButton.setBackground(Color.BLACK);
+	    fortuneButton.setBorderPainted(true);
+	    
+	    ImageIcon fortune8Icon = new ImageIcon("img//fortune8.png");
+	    Image fortune8IconNew = fortune8Icon.getImage();
+		Image fortune8IconModified = fortune8IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune8Icon = new ImageIcon(fortune8IconModified);
+		JLabel fortune8Label = new JLabel(fortune8Icon);
+		fortune8Label.setBounds(0, 740, 1600, 157);
+	    
+	    fortuneLabel.add(fortuneButton);
+		
+		fortuneLabel.add(fortune8Label);
+		
+		fortuneLabel.add(goMenu2);
+		
+		fortunePanel.add(fortuneLabel);
+	    
+	  //Fortune Panel end ------------------------------------------------------------
 	    
 		container.add(menuPanel, "menuPanel");
 		container.add(calculatorPanel, "calculatorPanel");
