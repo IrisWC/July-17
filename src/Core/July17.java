@@ -185,6 +185,7 @@ public class July17 extends JFrame implements ActionListener {
 	    fortuneButton.setBounds(730, 650, 160, 74);
 	    fortuneButton.setBackground(Color.BLACK);
 	    fortuneButton.setBorderPainted(false);
+	    fortuneButton.addActionListener(this);
 	    
 	    ImageIcon fortune8Icon = new ImageIcon("img//fortune8.png");
 	    Image fortune8IconNew = fortune8Icon.getImage();
@@ -231,7 +232,7 @@ public class July17 extends JFrame implements ActionListener {
 			result.setVisible(true);
 		}
 		if(e.getSource() == fortuneButton) {
-
+			cl.show(container, "menuPanel");
 		}
 	}
 	
