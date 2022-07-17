@@ -42,14 +42,14 @@ public class July17 extends JFrame implements ActionListener {
 		
 		backButton = new ImageIcon("img//backButton.png");
 		Image backButtonNew = backButton.getImage();
-		Image backButtonModified = backButtonNew.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		Image backButtonModified = backButtonNew.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
 		backButton = new ImageIcon(backButtonModified);
 		
 		//Menu Panel start --------------------------------------------------------
 	    
 		ImageIcon menuBackground = new ImageIcon("img//menu.png"); 
 		JLabel menuLabel = new JLabel(menuBackground);
-		menuLabel.setSize(1000, 900);
+		menuLabel.setSize(1600, 900);
 		
 		ImageIcon nwcIcon = new ImageIcon("img//nwc.png"); 
 		Image nwcIconNew = nwcIcon.getImage();
@@ -81,6 +81,16 @@ public class July17 extends JFrame implements ActionListener {
 	    goInfo.setBorderPainted(false);
 	    goInfo.addActionListener(this);
 	    
+//	    ImageIcon birdIcon = new ImageIcon("img//i.png"); 
+//	    Image birdIconNew = birdIcon.getImage();
+//		Image birdIconnModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+//		infoIcon = new ImageIcon(infoIconnModified);
+//	    goBird = new JButton(birdIcon);
+//	    goBird.setBounds(787, 486, 324, 324);
+//	    goBird.setBackground(Color.BLACK);
+//	    goBird.setBorderPainted(false);
+//	    goBird.addActionListener(this);
+	    
 	    menuLabel.add(goCalculator);
 	    menuLabel.add(goFortune);
 	    menuLabel.add(goInfo);
@@ -93,7 +103,7 @@ public class July17 extends JFrame implements ActionListener {
 		
 		
 		goMenu1 = new JButton(backButton);
-		goMenu1.setBounds(100, 100, 50, 50);
+		goMenu1.setBounds(150, 80, 70, 70);
 		goMenu1.setBackground(Color.BLACK);
 		goMenu1.setBorderPainted(false);
 		goMenu1.addActionListener(this);
@@ -173,7 +183,7 @@ public class July17 extends JFrame implements ActionListener {
 	  //Fortune Panel start ----------------------------------------------------------
 	    
 	    goMenu2 = new JButton(backButton);
-		goMenu2.setBounds(100, 100, 50, 50);
+		goMenu2.setBounds(150, 80, 70, 70);
 		goMenu2.setBackground(Color.BLACK);
 		goMenu2.setBorderPainted(false);
 		goMenu2.addActionListener(this);
