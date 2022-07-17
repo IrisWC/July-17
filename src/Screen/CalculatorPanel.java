@@ -111,9 +111,9 @@ public class CalculatorPanel extends JPanel{
 //	//        JLabel jLabel = new JLabel();
 //	//        jLabel.setBounds(90, 100, 400, 100);
 //	    
-	    add(jButton);
+//	    add(jButton);
 //	    add(jComboBox);
-	    //add(label);
+	    add(label);
 	    //add(jLabel);
 //	    
 //	    
