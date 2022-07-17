@@ -1,30 +1,34 @@
 package Screen;
 
 import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.awt.Image;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class FortunePanel extends JPanel{
 	
 	public FortunePanel() {
-		ImageIcon background = new ImageIcon("img//fortune.png");
-		JLabel label = new JLabel(background);
-		label.setSize(1600, 900);
 		
-		ImageIcon icon = new ImageIcon("img//getCard.png");
-	    
-	    JButton calcButton = new JButton(icon);
-	    calcButton.setBounds(675, 737, 250, 90);
-	    calcButton.setBackground(new Color(75, 54, 78));
-//	    calcButton.setBorderPainted(false);
-	    
-	    label.add(calcButton);
+		//background
+		ImageIcon fortuneBackground = new ImageIcon("img//fortune.png");
+		JLabel fortuneLabel = new JLabel(fortuneBackground);
+		fortuneLabel.setSize(1600, 900);
 		
-		add(label);
+		
+		//button
+		ImageIcon fortuneIcon = new ImageIcon("img//getCard.png");
+		Image fortuneIconNew = fortuneIcon.getImage();
+		Image fortuneIconModified = fortuneIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
+		fortuneIcon = new ImageIcon(fortuneIconModified);
+	    
+	    JButton fortuneButton = new JButton(fortuneIcon);
+	    fortuneButton.setBounds(730, 650, 160, 74);
+	    fortuneButton.setBackground(new Color(75, 54, 78));
+	    fortuneButton.setBorderPainted(true);
+	    
+	    
+	    fortuneLabel.add(fortuneButton);
+		add(fortuneLabel);
 	}
 	
 }
