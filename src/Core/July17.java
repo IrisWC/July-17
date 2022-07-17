@@ -37,12 +37,6 @@ public class July17 extends JFrame implements ActionListener {
 		infoPanel = new JPanel();
 		birdPanel = new JPanel();
 		
-		goMenu3 = new JButton("Back");
-
-		goMenu3.addActionListener(this);
-		
-		infoPanel.add(goMenu3);
-		
 		backButton = new ImageIcon("img//backButton.png");
 		Image backButtonNew = backButton.getImage();
 		Image backButtonModified = backButtonNew.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
@@ -84,12 +78,12 @@ public class July17 extends JFrame implements ActionListener {
 	    goInfo.setBorderPainted(false);
 	    goInfo.addActionListener(this);
 	    
-	    ImageIcon birdIcon = new ImageIcon("img//i.png"); 
+	    ImageIcon birdIcon = new ImageIcon("img//b.gif"); 
 	    Image birdIconNew = birdIcon.getImage();
 		Image birdIconModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
 		infoIcon = new ImageIcon(birdIconModified);
 	    goBird = new JButton(birdIcon);
-	    goBird.setBounds(0, 0, 324, 324);
+	    goBird.setBounds(1174, 486, 324, 324);
 	    goBird.setBackground(Color.BLACK);
 	    goBird.setBorderPainted(false);
 	    goBird.addActionListener(this);
@@ -271,7 +265,25 @@ public class July17 extends JFrame implements ActionListener {
 	    
 	  //Fortune Panel end ------------------------------------------------------------
 		
-		//Bird Panel start ---------------------------------------------------------
+		//Info Panel start ------------------------------------------------------------
+		
+		goMenu3 = new JButton(backButton);
+		goMenu3.setBounds(150, 80, 70, 70);
+		goMenu3.setBackground(Color.BLACK);
+		goMenu3.setBorderPainted(false);
+		goMenu3.addActionListener(this);
+	    
+	    ImageIcon infoBackground = new ImageIcon("img//info.png");
+		JLabel infoLabel = new JLabel(infoBackground);
+		infoLabel.setSize(1600, 900);
+		
+		infoLabel.add(goMenu3);
+		
+		infoPanel.add(infoLabel);
+		
+		//Info Panel end -------------------------------------------------------------
+		
+		//Bird Panel start -----------------------------------------------------------
 	    
 		goMenu4 = new JButton(backButton);
 		goMenu4.setBounds(150, 80, 70, 70);
@@ -287,7 +299,7 @@ public class July17 extends JFrame implements ActionListener {
 		
 		birdPanel.add(birdLabel);
 		
-		//Bird Panel end ----------------------------------------------------------
+		//Bird Panel end ------------------------------------------------------------
 	    
 		container.add(menuPanel, "menuPanel");
 		container.add(calculatorPanel, "calculatorPanel");
