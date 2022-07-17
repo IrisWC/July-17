@@ -9,11 +9,12 @@ import javax.swing.*;
 
 public class FortunePanel extends JPanel{
 	
-	
 	public FortunePanel() {
 		ImageIcon background = new ImageIcon("img//fortune.png");
 		JLabel label = new JLabel(background);
 		label.setSize(1600, 900);
+		
+		
 		
 		add(label);
 	}

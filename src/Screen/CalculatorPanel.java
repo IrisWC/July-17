@@ -114,7 +114,7 @@ public class CalculatorPanel extends JPanel{
 //	    
 //	    add(jButton);
 //	    add(jComboBox);
-	    add(label);
+	    //add(label);
 	    //add(jLabel);
 //	    
 //	    
