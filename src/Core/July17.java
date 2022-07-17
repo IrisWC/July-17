@@ -64,7 +64,7 @@ public class July17 extends JFrame implements ActionListener {
 		Image fortuneIconModified = fortuneIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
 		fortuneIcon = new ImageIcon(fortuneIconModified);
 	    goFortune = new JButton(fortuneIcon);
-	    goFortune.setBounds(1174, 90, 324, 324);
+	    goFortune.setBounds(1174, 90, 282, 282);
 	    goFortune.setBackground(Color.BLACK);
 	    goFortune.setBorderPainted(false);
 		goFortune.addActionListener(this);
@@ -74,7 +74,7 @@ public class July17 extends JFrame implements ActionListener {
 		Image infoIconnModified = infoIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
 		infoIcon = new ImageIcon(infoIconnModified);
 	    goInfo = new JButton(infoIcon);
-	    goInfo.setBounds(787, 486, 324, 324);
+	    goInfo.setBounds(787, 486, 282, 282);
 	    goInfo.setBackground(Color.BLACK);
 	    goInfo.setBorderPainted(false);
 	    goInfo.addActionListener(this);
@@ -84,7 +84,7 @@ public class July17 extends JFrame implements ActionListener {
 		Image birdIconModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
 		infoIcon = new ImageIcon(birdIconModified);
 	    goBird = new JButton(birdIcon);
-	    goBird.setBounds(1174, 486, 324, 324);
+	    goBird.setBounds(1174, 486, 282, 282);
 	    goBird.setBackground(Color.BLACK);
 	    goBird.setBorderPainted(false);
 	    goBird.addActionListener(this);
