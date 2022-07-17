@@ -58,15 +58,15 @@ public class CalculatorPanel extends JPanel{
 	    mathBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
-	    peachBox.setBounds(80, 50, 140, 20);
+	    peachBox.setBounds(543, 376, 176, 60);
 	    peachBox.setBackground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
-	    tattooBox.setBounds(80, 50, 140, 20);
+	    tattooBox.setBounds(543, 491, 176, 60);
 	    tattooBox.setBackground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
-	    emojiBox.setBounds(80, 50, 140, 20);
+	    emojiBox.setBounds(543, 623, 176, 60);
 	    emojiBox.setBackground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
@@ -86,6 +86,14 @@ public class CalculatorPanel extends JPanel{
 	    holidayBox.setBackground(new Color(40, 75, 80));
 	    
 	    label.add(mathBox);
+	    label.add(peachBox);
+	    label.add(tattooBox);
+	    label.add(emojiBox);
+	    label.add(iceCreamBox);
+	    label.add(planeBox);
+	    label.add(lotteryBox);
+	    label.add(holidayBox);
+	    
 //	    
 //	    ImageIcon icon = new ImageIcon("img//Test.png");
 //	    
