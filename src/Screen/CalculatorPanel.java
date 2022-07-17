@@ -1,18 +1,7 @@
 package Screen;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.*;
-import javax.imageio.ImageIO;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.io.File;
-import java.io.IOException;
 
 
 public class CalculatorPanel extends JPanel{
@@ -29,7 +18,6 @@ public class CalculatorPanel extends JPanel{
 	private String[] holidayOptions = {"0", "1-3", "4-9", "10", "11+"};
 	
 	public CalculatorPanel() {
-		//background image
 		
 //		BufferedImage img;
 //		try {
@@ -45,12 +33,6 @@ public class CalculatorPanel extends JPanel{
 		JLabel label = new JLabel(background);
 		label.setSize(1600, 900);
 		
-		//drop down
-		//Int[] 
-		
-		
-		//drop down boxes
-		//String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
 		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
 	    mathBox.setBounds(543, 244, 140, 50);

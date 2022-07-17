@@ -3,8 +3,6 @@ package Screen;
 import javax.swing.*;
 
 import java.awt.Color;
-import java.awt.Image;
-import java.awt.color.*;
 import java.awt.event.ActionListener;
 
 public class MenuPanel extends JPanel{
