@@ -12,7 +12,7 @@ public class July17 extends JFrame implements ActionListener {
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
 	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton, fortuneButton;
 	ImageIcon backButton;
-	JLabel fortuneLabel, fortune8Label;
+	JLabel fortuneLabel, fortune1Label, fortune2Label, fortune3Label, fortune4Label, fortune5Label, fortune6Label, fortune7Label, fortune8Label;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -187,6 +187,55 @@ public class July17 extends JFrame implements ActionListener {
 	    fortuneButton.setBorderPainted(false);
 	    fortuneButton.addActionListener(this);
 	    
+	    ImageIcon fortune1Icon = new ImageIcon("img//fortune1.png");
+	    Image fortune1IconNew = fortune1Icon.getImage();
+		Image fortune1IconModified = fortune1IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune1Icon = new ImageIcon(fortune1IconModified);
+		fortune1Label = new JLabel(fortune1Icon);
+		fortune1Label.setBounds(0, 740, 1600, 157);
+		
+		ImageIcon fortune2Icon = new ImageIcon("img//fortune2.png");
+	    Image fortune2IconNew = fortune2Icon.getImage();
+		Image fortune2IconModified = fortune2IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune2Icon = new ImageIcon(fortune2IconModified);
+		fortune2Label = new JLabel(fortune2Icon);
+		fortune2Label.setBounds(0, 740, 1600, 157);
+	    
+	    ImageIcon fortune3Icon = new ImageIcon("img//fortune3.png");
+	    Image fortune3IconNew = fortune3Icon.getImage();
+		Image fortune3IconModified = fortune3IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune3Icon = new ImageIcon(fortune3IconModified);
+		fortune3Label = new JLabel(fortune3Icon);
+		fortune3Label.setBounds(0, 740, 1600, 157);
+	    
+	    ImageIcon fortune4Icon = new ImageIcon("img//fortune4.png");
+	    Image fortune4IconNew = fortune4Icon.getImage();
+		Image fortune4IconModified = fortune4IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune4Icon = new ImageIcon(fortune4IconModified);
+		fortune4Label = new JLabel(fortune4Icon);
+		fortune4Label.setBounds(0, 740, 1600, 157);
+	    
+	    ImageIcon fortune5Icon = new ImageIcon("img//fortune5.png");
+	    Image fortune5IconNew = fortune5Icon.getImage();
+		Image fortune5IconModified = fortune5IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune5Icon = new ImageIcon(fortune5IconModified);
+		fortune5Label = new JLabel(fortune5Icon);
+		fortune5Label.setBounds(0, 740, 1600, 157);
+	    
+	    ImageIcon fortune6Icon = new ImageIcon("img//fortune6.png");
+	    Image fortune6IconNew = fortune6Icon.getImage();
+		Image fortune6IconModified = fortune6IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune6Icon = new ImageIcon(fortune6IconModified);
+		fortune6Label = new JLabel(fortune6Icon);
+		fortune6Label.setBounds(0, 740, 1600, 157);
+		
+		ImageIcon fortune7Icon = new ImageIcon("img//fortune7.png");
+	    Image fortune7IconNew = fortune7Icon.getImage();
+		Image fortune7IconModified = fortune7IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
+		fortune7Icon = new ImageIcon(fortune7IconModified);
+		fortune7Label = new JLabel(fortune7Icon);
+		fortune7Label.setBounds(0, 740, 1600, 157);
+	    
 	    ImageIcon fortune8Icon = new ImageIcon("img//fortune8.png");
 	    Image fortune8IconNew = fortune8Icon.getImage();
 		Image fortune8IconModified = fortune8IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
@@ -232,7 +281,35 @@ public class July17 extends JFrame implements ActionListener {
 			result.setVisible(true);
 		}
 		if(e.getSource() == fortuneButton) {
-			cl.show(container, "menuPanel");
+			int rand = (int)(Math.random()*8);
+			switch(rand) {
+			case 1:
+				fortuneLabel.add(fortune1Label);
+				break;
+			case 2:
+				fortuneLabel.add(fortune2Label);
+				break;
+			case 3:
+				fortuneLabel.add(fortune3Label);
+				break;
+			case 4:
+				fortuneLabel.add(fortune4Label);
+				break;
+			case 5:
+				fortuneLabel.add(fortune5Label);
+				break;
+			case 6:
+				fortuneLabel.add(fortune6Label);
+				break;
+			case 7:
+				fortuneLabel.add(fortune7Label);
+				break;
+			case 8:
+				fortuneLabel.add(fortune8Label);
+				break;
+			}
+			fortunePanel.revalidate();
+			fortunePanel.repaint();
 		}
 	}
 	
