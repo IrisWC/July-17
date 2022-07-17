@@ -10,8 +10,9 @@ public class July17 extends JFrame implements ActionListener {
 	CardLayout cl;
 	Container container;
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
-	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton;
+	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton, fortuneButton;
 	ImageIcon backButton;
+	JLabel fortuneLabel, fortune8Label;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -144,7 +145,7 @@ public class July17 extends JFrame implements ActionListener {
 		goMenu2.addActionListener(this);
 	    
 	    ImageIcon fortuneBackground = new ImageIcon("img//fortune.png");
-		JLabel fortuneLabel = new JLabel(fortuneBackground);
+		fortuneLabel = new JLabel(fortuneBackground);
 		fortuneLabel.setSize(1600, 900);
 		
 		ImageIcon fortuneIcon = new ImageIcon("img//getCard.png");
@@ -152,21 +153,19 @@ public class July17 extends JFrame implements ActionListener {
 		Image fortuneIconModified = fortuneIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
 		fortuneIcon = new ImageIcon(fortuneIconModified);
 	    
-	    JButton fortuneButton = new JButton(fortuneIcon);
+	    fortuneButton = new JButton(fortuneIcon);
 	    fortuneButton.setBounds(730, 650, 160, 74);
 	    fortuneButton.setBackground(Color.BLACK);
-	    fortuneButton.setBorderPainted(true);
+	    fortuneButton.setBorderPainted(false);
 	    
 	    ImageIcon fortune8Icon = new ImageIcon("img//fortune8.png");
 	    Image fortune8IconNew = fortune8Icon.getImage();
 		Image fortune8IconModified = fortune8IconNew.getScaledInstance(1600, 157, Image.SCALE_SMOOTH);
 		fortune8Icon = new ImageIcon(fortune8IconModified);
-		JLabel fortune8Label = new JLabel(fortune8Icon);
+		fortune8Label = new JLabel(fortune8Icon);
 		fortune8Label.setBounds(0, 740, 1600, 157);
 	    
 	    fortuneLabel.add(fortuneButton);
-		
-		fortuneLabel.add(fortune8Label);
 		
 		fortuneLabel.add(goMenu2);
 		
@@ -197,7 +196,10 @@ public class July17 extends JFrame implements ActionListener {
 			cl.show(container, "infoPanel");
 		}
 		if(e.getSource() == calcButton) {
-			
+
+		}
+		if(e.getSource() == fortuneButton) {
+
 		}
 	}
 	
