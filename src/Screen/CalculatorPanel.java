@@ -59,38 +59,38 @@ public class CalculatorPanel extends JPanel{
 	    
 	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
 	    peachBox.setBounds(543, 376, 176, 60);
-	    peachBox.setBackground(Color.WHITE);
-	    peachBox.setForeground(new Color(40, 75, 80));
+	    peachBox.setBackground(new Color(40, 75, 80));
+	    peachBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
 	    tattooBox.setBounds(543, 491, 176, 60);
-	    tattooBox.setBackground(Color.WHITE);
-	    tattooBox.setForeground(new Color(40, 75, 80));
+	    tattooBox.setBackground(new Color(40, 75, 80));
+	    tattooBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
 	    emojiBox.setBounds(543, 623, 176, 60);
-	    emojiBox.setBackground(Color.WHITE);
-	    emojiBox.setForeground(new Color(40, 75, 80));
+	    emojiBox.setBackground(new Color(40, 75, 80));
+	    emojiBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
 	    iceCreamBox.setBounds(1263, 244, 176, 60);
-	    iceCreamBox.setBackground(Color.WHITE);
-	    iceCreamBox.setForeground(new Color(40, 75, 80));
+	    iceCreamBox.setBackground(new Color(40, 75, 80));
+	    iceCreamBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> planeBox = new JComboBox<>(planeOptions);
 	    planeBox.setBounds(1263, 376, 176, 60);
-	    planeBox.setBackground(Color.WHITE);
-	    planeBox.setForeground(new Color(40, 75, 80));
+	    planeBox.setBackground(new Color(40, 75, 80));
+	    planeBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> lotteryBox = new JComboBox<>(lotteryOptions);
 	    lotteryBox.setBounds(1263, 508, 176, 60);
-	    lotteryBox.setBackground(Color.WHITE);
-	    lotteryBox.setForeground(new Color(40, 75, 80));
+	    lotteryBox.setBackground(new Color(40, 75, 80));
+	    lotteryBox.setForeground(Color.WHITE);
 	    
 	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
 	    holidayBox.setBounds(1263, 623, 176, 60);
-	    holidayBox.setBackground(Color.WHITE);
-	    holidayBox.setForeground(new Color(40, 75, 80));
+	    holidayBox.setBackground(new Color(40, 75, 80));
+	    holidayBox.setForeground(Color.WHITE);
 	    
 	    label.add(mathBox);
 	    label.add(peachBox);
