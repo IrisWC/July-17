@@ -73,12 +73,12 @@ public class July17 extends JFrame implements ActionListener {
 	    peachBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
-	    tattooBox.setBounds(543, 491, 140, 50);
+	    tattooBox.setBounds(543, 508, 140, 50);
 	    tattooBox.setBackground(Color.WHITE);
 	    tattooBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
-	    emojiBox.setBounds(543, 623, 140, 50);
+	    emojiBox.setBounds(543, 625, 140, 50);
 	    emojiBox.setBackground(Color.WHITE);
 	    emojiBox.setForeground(new Color(40, 75, 80));
 	    
@@ -98,7 +98,7 @@ public class July17 extends JFrame implements ActionListener {
 	    lotteryBox.setForeground(new Color(40, 75, 80));
 	    
 	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
-	    holidayBox.setBounds(1263, 623, 140, 50);
+	    holidayBox.setBounds(1263, 625, 140, 50);
 	    holidayBox.setBackground(Color.WHITE);
 	    holidayBox.setForeground(new Color(40, 75, 80));
 	    
@@ -112,6 +112,9 @@ public class July17 extends JFrame implements ActionListener {
 	    calcLabel.add(holidayBox);
 	    
 	    ImageIcon calcIcon = new ImageIcon("img//calculateNW.png");
+	    Image calcIconNew = calcIcon.getImage();
+		Image calcIconModified = calcIconNew.getScaledInstance(250, 90, Image.SCALE_SMOOTH);
+		calcIcon = new ImageIcon(calcIconModified);
 	    
 	    calcButton = new JButton(calcIcon);
 	    calcButton.setBounds(675, 737, 250, 90);
