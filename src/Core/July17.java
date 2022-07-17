@@ -35,25 +35,50 @@ public class July17 extends JFrame implements ActionListener {
 		infoPanel = new JPanel();
 		
 		goMenu3 = new JButton("Back");
-		goCalculator = new JButton("Net Worth Calculator");
-		goFortune = new JButton("Fortune Teller");
-		goInfo = new JButton("Info");
-		
 
 		goMenu3.addActionListener(this);
-		goCalculator.addActionListener(this);
-		goFortune.addActionListener(this);
-		goInfo.addActionListener(this);
 		
-		menuPanel.add(goCalculator);
-		menuPanel.add(goFortune);
-		menuPanel.add(goInfo);
 		infoPanel.add(goMenu3);
 		
 		backButton = new ImageIcon("img//backButton.png");
 		Image backButtonNew = backButton.getImage();
 		Image backButtonModified = backButtonNew.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
 		backButton = new ImageIcon(backButtonModified);
+		
+		//Menu Panel start --------------------------------------------------------
+	    
+		ImageIcon menuBackground = new ImageIcon("img//menu.gif"); 
+		JLabel menuLabel = new JLabel(menuBackground);
+		menuLabel.setSize(1600, 900);
+		
+		ImageIcon nwcIcon = new ImageIcon("img//nwc.png"); 
+	    goCalculator = new JButton(nwcIcon);
+	    goCalculator.setBounds(787, 90, 324, 324);
+	    goCalculator.setBackground(Color.BLACK);
+	    goCalculator.setBorderPainted(false);
+		goCalculator.addActionListener(this);
+	    
+	    ImageIcon fortuneIcon = new ImageIcon("img//ft.png"); 
+	    goFortune = new JButton(fortuneIcon);
+	    goFortune.setBounds(1174, 90, 324, 324);
+	    goFortune.setBackground(Color.BLACK);
+	    goFortune.setBorderPainted(false);
+		goFortune.addActionListener(this);
+	    
+	    ImageIcon infoIcon = new ImageIcon("img//i.png"); 
+	    goInfo = new JButton(infoIcon);
+	    goInfo.setBounds(787, 486, 324, 324);
+	    goInfo.setBackground(Color.BLACK);
+	    goInfo.setBorderPainted(false);
+	    goInfo.addActionListener(this);
+	    
+	    menuLabel.add(goCalculator);
+	    menuLabel.add(goFortune);
+	    menuLabel.add(goInfo);
+	    
+	    menuPanel.add(menuLabel);
+		
+		//Menu Panel end ----------------------------------------------------------
 		
 		//Calculator Panel start --------------------------------------------------
 		
@@ -148,7 +173,7 @@ public class July17 extends JFrame implements ActionListener {
 		fortuneLabel = new JLabel(fortuneBackground);
 		fortuneLabel.setSize(1600, 900);
 		
-		ImageIcon fortuneIcon = new ImageIcon("img//getCard.png");
+		fortuneIcon = new ImageIcon("img//getCard.png");
 		Image fortuneIconNew = fortuneIcon.getImage();
 		Image fortuneIconModified = fortuneIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
 		fortuneIcon = new ImageIcon(fortuneIconModified);
