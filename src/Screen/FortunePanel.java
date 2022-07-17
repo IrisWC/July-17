@@ -23,7 +23,7 @@ public class FortunePanel extends JPanel{
 	    
 	    JButton fortuneButton = new JButton(fortuneIcon);
 	    fortuneButton.setBounds(730, 650, 160, 74);
-	    fortuneButton.setBackground(new Color(75, 54, 78));
+	    fortuneButton.setBackground(Color.BLACK);
 	    fortuneButton.setBorderPainted(true);
 	    
 	    

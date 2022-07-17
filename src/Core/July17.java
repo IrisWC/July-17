@@ -11,6 +11,10 @@ public class July17 extends JFrame implements ActionListener {
 	Container container;
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
 	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton;
+	ImageIcon backButton = new ImageIcon("img//backButton.png");
+	Image backButtonNew = backButton.getImage();
+	Image backButtonModified = backButtonNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
+	backButton = new ImageIcon(backButtonModified);
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -53,8 +57,10 @@ public class July17 extends JFrame implements ActionListener {
 		
 		//Calculator Panel start --------------------------------------------------
 		
-		goMenu1 = new JButton("<");
+		goMenu1 = new JButton(backButton);
 		goMenu1.setBounds(100, 100, 50, 50);
+		goMenu1.setBackground(Color.BLACK);
+		goMenu1.setBorderPainted(true);
 		goMenu1.addActionListener(this);
 		calculatorPanel.add(goMenu1);
 		

@@ -105,8 +105,8 @@ public class CalculatorPanel extends JPanel{
 	    
 	    JButton calcButton = new JButton(icon);
 	    calcButton.setBounds(675, 737, 250, 90);
-	    calcButton.setBackground(new Color(40, 75, 80));
-	    calcButton.setBorderPainted(false);
+	    calcButton.setBackground(Color.BLACK);
+	    calcButton.setBorderPainted(true);
 	    
 	    label.add(calcButton);
 	    
