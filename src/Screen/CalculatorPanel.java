@@ -52,12 +52,39 @@ public class CalculatorPanel extends JPanel{
 		//drop down boxes
 		//String[] optionsToChoose = {"Apple", "Orange", "Banana", "Pineapple", "None of the listed"};
 		
-		JComboBox<String> jComboBox = new JComboBox<>(mathOptions);
-	    jComboBox.setBounds(80, 50, 140, 20);
-	    jComboBox.setBackground(new Color(40, 75, 80));
+		JComboBox<String> mathBox = new JComboBox<>(mathOptions);
+	    mathBox.setBounds(543, 244, 176, 60);
+	    mathBox.setBackground(new Color(40, 75, 80));
 	    
+	    JComboBox<String> peachBox = new JComboBox<>(peachOptions);
+	    peachBox.setBounds(80, 50, 140, 20);
+	    peachBox.setBackground(new Color(40, 75, 80));
 	    
-	    label.add(jComboBox);
+	    JComboBox<String> tattooBox = new JComboBox<>(tattooOptions);
+	    tattooBox.setBounds(80, 50, 140, 20);
+	    tattooBox.setBackground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> emojiBox = new JComboBox<>(emojiOptions);
+	    emojiBox.setBounds(80, 50, 140, 20);
+	    emojiBox.setBackground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> iceCreamBox = new JComboBox<>(iceCreamOptions);
+	    iceCreamBox.setBounds(80, 50, 140, 20);
+	    iceCreamBox.setBackground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> planeBox = new JComboBox<>(planeOptions);
+	    planeBox.setBounds(80, 50, 140, 20);
+	    planeBox.setBackground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> lotteryBox = new JComboBox<>(lotteryOptions);
+	    lotteryBox.setBounds(80, 50, 140, 20);
+	    lotteryBox.setBackground(new Color(40, 75, 80));
+	    
+	    JComboBox<String> holidayBox = new JComboBox<>(holidayOptions);
+	    holidayBox.setBounds(80, 50, 140, 20);
+	    holidayBox.setBackground(new Color(40, 75, 80));
+	    
+	    label.add(mathBox);
 //	    
 //	    ImageIcon icon = new ImageIcon("img//Test.png");
 //	    
