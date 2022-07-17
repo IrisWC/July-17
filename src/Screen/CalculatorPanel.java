@@ -104,7 +104,7 @@ public class CalculatorPanel extends JPanel{
 	    ImageIcon icon = new ImageIcon("img//calculateNW.png");
 	    
 	    JButton calcButton = new JButton(icon);
-	    calcButton.setBounds(550, 737, 250, 90);
+	    calcButton.setBounds(675, 737, 250, 90);
 	    calcButton.setBackground(new Color(40, 75, 80));
 	    calcButton.setBorderPainted(false);
 	    
