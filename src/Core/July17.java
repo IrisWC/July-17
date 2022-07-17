@@ -11,10 +11,7 @@ public class July17 extends JFrame implements ActionListener {
 	Container container;
 	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
 	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton;
-	ImageIcon backButton = new ImageIcon("img//backButton.png");
-	Image backButtonNew = backButton.getImage();
-	Image backButtonModified = backButtonNew.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
-	backButton = new ImageIcon(backButtonModified);
+	ImageIcon backButton;
 	
 	private String[] mathOptions = {"0", "1", "2", "3", "4+"};
 	private String[] peachOptions = {"0", "1-5", "6-10", "11-15", "16+"};
@@ -55,12 +52,18 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel.add(goMenu2);
 		infoPanel.add(goMenu3);
 		
+		backButton = new ImageIcon("img//backButton.png");
+		Image backButtonNew = backButton.getImage();
+		Image backButtonModified = backButtonNew.getScaledInstance(50, 50, Image.SCALE_SMOOTH);
+		backButton = new ImageIcon(backButtonModified);
+		
 		//Calculator Panel start --------------------------------------------------
+		
 		
 		goMenu1 = new JButton(backButton);
 		goMenu1.setBounds(100, 100, 50, 50);
 		goMenu1.setBackground(Color.BLACK);
-		goMenu1.setBorderPainted(true);
+		goMenu1.setBorderPainted(false);
 		goMenu1.addActionListener(this);
 		calculatorPanel.add(goMenu1);
 		
@@ -126,6 +129,7 @@ public class July17 extends JFrame implements ActionListener {
 	    calcButton.setBounds(675, 737, 250, 90);
 	    calcButton.setBackground(new Color(40, 75, 80));
 	    calcButton.setBorderPainted(false);
+	    
 	    
 	    calcLabel.add(calcButton);
 	    
