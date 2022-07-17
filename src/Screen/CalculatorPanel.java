@@ -101,12 +101,11 @@ public class CalculatorPanel extends JPanel{
 	    label.add(lotteryBox);
 	    label.add(holidayBox);
 	    
-//	    
-//	    ImageIcon icon = new ImageIcon("img//Test.png");
-//	    
-//	    JButton jButton = new JButton(icon);
-//	    jButton.setBounds(100, 100, 90, 20);
-//	    jButton.setBackground(Color.BLACK);
+	    ImageIcon icon = new ImageIcon("img//caculateNW.png");
+	    
+	    JButton jButton = new JButton(icon);
+	    jButton.setBounds(100, 100, 90, 20);
+	    jButton.setBackground(new Color(40, 75, 80));
 //	    jButton.setBorderPainted(false);
 //	
 //	//        JLabel jLabel = new JLabel();
