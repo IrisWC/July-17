@@ -11,8 +11,8 @@ public class July17 extends JFrame implements ActionListener {
 	
 	CardLayout cl;
 	Container container;
-	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel;
-	JButton goMenu1, goMenu2, goMenu3, goCalculator, goFortune, goInfo, calcButton, fortuneButton;
+	JPanel menuPanel, calculatorPanel, fortunePanel, infoPanel, birdPanel;
+	JButton goMenu1, goMenu2, goMenu3, goMenu4, goCalculator, goFortune, goInfo, goBird, calcButton, fortuneButton;
 	ImageIcon backButton;
 	JLabel fortuneLabel, fortune1Label, fortune2Label, fortune3Label, fortune4Label, fortune5Label, fortune6Label, fortune7Label, fortune8Label;
 	
@@ -35,6 +35,7 @@ public class July17 extends JFrame implements ActionListener {
 		calculatorPanel = new JPanel();
 		fortunePanel = new JPanel();
 		infoPanel = new JPanel();
+		birdPanel = new JPanel();
 		
 		goMenu3 = new JButton("Back");
 
@@ -83,19 +84,20 @@ public class July17 extends JFrame implements ActionListener {
 	    goInfo.setBorderPainted(false);
 	    goInfo.addActionListener(this);
 	    
-//	    ImageIcon birdIcon = new ImageIcon("img//i.png"); 
-//	    Image birdIconNew = birdIcon.getImage();
-//		Image birdIconnModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
-//		infoIcon = new ImageIcon(infoIconnModified);
-//	    goBird = new JButton(birdIcon);
-//	    goBird.setBounds(787, 486, 324, 324);
-//	    goBird.setBackground(Color.BLACK);
-//	    goBird.setBorderPainted(false);
-//	    goBird.addActionListener(this);
+	    ImageIcon birdIcon = new ImageIcon("img//i.png"); 
+	    Image birdIconNew = birdIcon.getImage();
+		Image birdIconModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
+		infoIcon = new ImageIcon(birdIconModified);
+	    goBird = new JButton(birdIcon);
+	    goBird.setBounds(0, 0, 324, 324);
+	    goBird.setBackground(Color.BLACK);
+	    goBird.setBorderPainted(false);
+	    goBird.addActionListener(this);
 	    
 	    menuLabel.add(goCalculator);
 	    menuLabel.add(goFortune);
 	    menuLabel.add(goInfo);
+	    menuLabel.add(goBird);
 	    
 	    menuPanel.add(menuLabel);
 		
@@ -268,18 +270,37 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel.add(fortuneLabel);
 	    
 	  //Fortune Panel end ------------------------------------------------------------
+		
+		//Bird Panel start ---------------------------------------------------------
+	    
+		goMenu4 = new JButton(backButton);
+		goMenu4.setBounds(150, 80, 70, 70);
+		goMenu4.setBackground(Color.BLACK);
+		goMenu4.setBorderPainted(false);
+		goMenu4.addActionListener(this);
+		
+		ImageIcon birdBackground = new ImageIcon("img//bird.png"); 
+		JLabel birdLabel = new JLabel(birdBackground);
+		birdLabel.setSize(1600, 900);
+		
+		birdLabel.add(goMenu4);
+		
+		birdPanel.add(birdLabel);
+		
+		//Bird Panel end ----------------------------------------------------------
 	    
 		container.add(menuPanel, "menuPanel");
 		container.add(calculatorPanel, "calculatorPanel");
 		container.add(fortunePanel, "fortunePanel");
 		container.add(infoPanel, "infoPanel");
+		container.add(birdPanel, "birdPanel");
 		
 
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == goMenu1 || e.getSource() == goMenu2 || e.getSource() == goMenu3) {
+		if(e.getSource() == goMenu1 || e.getSource() == goMenu2 || e.getSource() == goMenu3 || e.getSource() == goMenu4) {
 			cl.show(container, "menuPanel");
 		}
 		if(e.getSource() == goCalculator) {
@@ -290,6 +311,9 @@ public class July17 extends JFrame implements ActionListener {
 		}
 		if(e.getSource() == goInfo) {
 			cl.show(container, "infoPanel");
+		}
+		if(e.getSource() == goBird) {
+			cl.show(container, "birdPanel");
 		}
 		if(e.getSource() == calcButton) {
 			JFrame result = new JFrame();
