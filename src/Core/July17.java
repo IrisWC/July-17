@@ -83,10 +83,12 @@ public class July17 extends JFrame implements ActionListener {
 	    Image birdIconNew = birdIcon.getImage();
 		Image birdIconModified = birdIconNew.getScaledInstance(282, 282, Image.SCALE_SMOOTH);
 		infoIcon = new ImageIcon(birdIconModified);
-	    goBird = new JButton(birdIcon);
+	    goBird = new JButton();
 	    goBird.setBounds(1174, 486, 282, 282);
 	    goBird.setBackground(Color.BLACK);
 	    goBird.setBorderPainted(false);
+	    goBird.setOpaque(false);
+	    goBird.setContentAreaFilled(false);
 	    goBird.addActionListener(this);
 	    
 	    menuLabel.add(goCalculator);
