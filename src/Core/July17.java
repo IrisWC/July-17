@@ -173,12 +173,12 @@ public class July17 extends JFrame implements ActionListener {
 		fortuneLabel = new JLabel(fortuneBackground);
 		fortuneLabel.setSize(1600, 900);
 		
-		fortuneIcon = new ImageIcon("img//getCard.png");
-		Image fortuneIconNew = fortuneIcon.getImage();
-		Image fortuneIconModified = fortuneIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
-		fortuneIcon = new ImageIcon(fortuneIconModified);
+		ImageIcon getCardIcon = new ImageIcon("img//getCard.png");
+		Image getCardIconNew = getCardIcon.getImage();
+		Image getCardIconModified = getCardIconNew.getScaledInstance(160, 74, Image.SCALE_SMOOTH);
+		getCardIcon = new ImageIcon(getCardIconModified);
 	    
-	    fortuneButton = new JButton(fortuneIcon);
+	    fortuneButton = new JButton(getCardIcon);
 	    fortuneButton.setBounds(730, 650, 160, 74);
 	    fortuneButton.setBackground(Color.BLACK);
 	    fortuneButton.setBorderPainted(false);
