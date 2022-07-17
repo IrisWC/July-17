@@ -32,15 +32,13 @@ public class July17 extends JFrame implements ActionListener {
 		fortunePanel = new JPanel();
 		infoPanel = new JPanel();
 		
-		goMenu1 = new JButton("Back");
 		goMenu2 = new JButton("Back");
 		goMenu3 = new JButton("Back");
 		goCalculator = new JButton("Net Worth Calculator");
 		goFortune = new JButton("Fortune Teller");
 		goInfo = new JButton("Info");
 		
-		
-		goMenu1.addActionListener(this);
+
 		goMenu2.addActionListener(this);
 		goMenu3.addActionListener(this);
 		goCalculator.addActionListener(this);
@@ -50,11 +48,15 @@ public class July17 extends JFrame implements ActionListener {
 		menuPanel.add(goCalculator);
 		menuPanel.add(goFortune);
 		menuPanel.add(goInfo);
-		calculatorPanel.add(goMenu1);
 		fortunePanel.add(goMenu2);
 		infoPanel.add(goMenu3);
 		
 		//Calculator Panel start --------------------------------------------------
+		
+		goMenu1 = new JButton("<");
+		goMenu1.setBounds(100, 100, 50, 50);
+		goMenu1.addActionListener(this);
+		calculatorPanel.add(goMenu1);
 		
 		ImageIcon calcBackground = new ImageIcon("img//calculator.png");
 		JLabel calcLabel = new JLabel(calcBackground);
@@ -117,6 +119,8 @@ public class July17 extends JFrame implements ActionListener {
 	    calcButton.setBorderPainted(false);
 	    
 	    calcLabel.add(calcButton);
+	    
+	    calcLabel.add(goMenu1);
 	    
 	    calculatorPanel.add(calcLabel);
 		
